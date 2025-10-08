@@ -73,16 +73,17 @@ GLS helps confirm that this transformation did not change the intended behavior.
 read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsdpll.lib
 
 ```
-<a href="https://ibb.co/dyJ5mnZ"><img src="https://i.ibb.co/KHzrKCn/Screenshot-from-2025-10-07-23-21-27.png" alt="Screenshot-from-2025-10-07-23-21-27" border="0"></a>
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-21-27.png)
+
 ```bash
 read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsddac.lib
 ```
-<a href="https://ibb.co/5WZ7Mf0w"><img src="https://i.ibb.co/LzKGk2FH/Screenshot-from-2025-10-07-23-22-17.png" alt="Screenshot-from-2025-10-07-23-22-17" border="0"></a>
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-22-17.png)
 ```bash
 read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ```
-
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-24-39.png)
 ### 3️⃣ Run Synthesis
 ```bash
 synth -top vsdbabysoc
