@@ -65,7 +65,7 @@ GLS helps confirm that this transformation did not change the intended behavior.
 ```
 <a href="https://ibb.co/MkSwBMWH"><img src="https://i.ibb.co/B23WnqdJ/Screenshot-from-2025-10-07-23-17-10.png" alt="Screenshot-from-2025-10-07-23-17-10" border="0"></a>
 
----
+
 
 ### 2️⃣ Run Gate-Level Simulation (GLS)
 
