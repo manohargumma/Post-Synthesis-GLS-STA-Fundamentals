@@ -58,7 +58,8 @@ GLS helps confirm that this transformation did not change the intended behavior.
  read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/rvmyth.v
 ```
 <a href="https://ibb.co/yn1WKtM0"><img src="https://i.ibb.co/RpmztfM2/Screenshot-from-2025-10-07-23-16-17.png" alt="Screenshot-from-2025-10-07-23-16-17" border="0"></a>
- 
+ ```bash
+
  read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/clk_gate.v
 
 ```
