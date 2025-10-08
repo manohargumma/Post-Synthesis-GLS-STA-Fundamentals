@@ -120,12 +120,17 @@ setundef -zero
  rename -enumerate
 
 ```
+### 7️⃣ Check Statistics
+
 ```bash
 stat
 
 
 ```
-
+### 8️⃣ Write the Synthesized Netlist
+```bash
+iverilog -o /home/manohar-g/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out \ -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 \ -I /home/manohar-g/VLSI/VSDBabySoC/src/include \ -I /home/manohar-g/VLSI/VSDBabySoC/src/module \ /home/manohar-g/VLSI/VSDBabySoC/src/module/testbench.v
+```
 ## 🧾 Results Summary
 
 | Stage          | Simulator | Output             | Result        |
