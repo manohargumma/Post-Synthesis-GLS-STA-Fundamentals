@@ -144,17 +144,22 @@ abc -liberty /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v
 
 flatten
 ```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c53ac320b067cf9feda530fa758ecba2144563a7/Screenshot%20from%202025-10-07%2023-34-48.png)
 
 ```bash
 setundef -zero
 ```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c53ac320b067cf9feda530fa758ecba2144563a7/Screenshot%20from%202025-10-07%2023-35-15.png)
 ```bash
  clean -purge
-```
+``
+![image alt](`https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c53ac320b067cf9feda530fa758ecba2144563a7/Screenshot%20from%202025-10-07%2023-35-40.png)
+
 ```bash
  rename -enumerate
 
 ```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c53ac320b067cf9feda530fa758ecba2144563a7/Screenshot%20from%202025-10-07%2023-36-34.png)
 ### 7️⃣ Check Statistics
 
 ```bash
@@ -162,6 +167,7 @@ stat
 
 
 ```
+![image alt](
 ### 8️⃣ Write the Synthesized Netlist
 ```bash
 iverilog -o /home/manohar-g/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out \ -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 \ -I /home/manohar-g/VLSI/VSDBabySoC/src/include \ -I /home/manohar-g/VLSI/VSDBabySoC/src/module \ /home/manohar-g/VLSI/VSDBabySoC/src/module/testbench.v
