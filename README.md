@@ -7,7 +7,7 @@
 ![Simulator-Icarus\_Verilog](https://img.shields.io/badge/Simulator-Icarus_Verilog-orange)
 
 
-![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-10-14.png)
+
 ## Post-Synthesis GLS  
 ## Purpose of GLS
 
@@ -53,17 +53,17 @@ GLS helps confirm that this transformation did not change the intended behavior.
  read_verilog /home/manohar-g/VLSI/VSDBabySoC/src/module/vsdbabysoc.v
 
 ```
-<a href="https://ibb.co/CKgWsC32"><img src="https://i.ibb.co/Zz5N14pm/Screenshot-from-2025-10-07-23-10-14.png" alt="Screenshot-from-2025-10-07-23-10-14" border="0"></a>
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-10-14.png)
 ```bash
  read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/rvmyth.v
 ```
-<a href="https://ibb.co/yn1WKtM0"><img src="https://i.ibb.co/RpmztfM2/Screenshot-from-2025-10-07-23-16-17.png" alt="Screenshot-from-2025-10-07-23-16-17" border="0"></a>
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-16-17.png)
  ```bash
 
  read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/clk_gate.v
 
 ```
-<a href="https://ibb.co/MkSwBMWH"><img src="https://i.ibb.co/B23WnqdJ/Screenshot-from-2025-10-07-23-17-10.png" alt="Screenshot-from-2025-10-07-23-17-10" border="0"></a>
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-17-10.png)
 
 
 
