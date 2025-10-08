@@ -152,7 +152,8 @@ setundef -zero
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c53ac320b067cf9feda530fa758ecba2144563a7/Screenshot%20from%202025-10-07%2023-35-15.png)
 ```bash
  clean -purge
-``
+```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/1df693beaf0f37367cb27a36cbf1a022b82c2001/Screenshot%20from%202025-10-07%2023-35-40.png)
 
 ```bash
  rename -enumerate
