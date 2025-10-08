@@ -176,6 +176,67 @@ write_verilog -noattr output/synth/vsdbabysoc.synth.v
 ```
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/7c3a334eaa734eb84950d499d893a205dd40387e/Screenshot%20from%202025-10-07%2023-45-33.png)
 
+
+
+# 🧩 Post-Synthesis Simulation and Waveforms
+
+This section provides a step-by-step guide to perform **post-synthesis simulation** and **view waveforms** for the **VSDBabySoC** project.
+
+---
+
+## ⚙️ Step 1: Compile the Testbench
+
+Use the following `iverilog` command to compile the post-synthesis testbench:
+
+```bash
+iverilog -o  /home/manohar-g/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 -I /home/manohar-g/VLSI/VSDBabySoC/src/include -I /home/manohar-g/VLSI/VSDBabySoC/src/module home/manohar-g/VLSI/VSDBabySoC/src/module/testbench.v
+
+```
+
+### 📘 Explanation:
+
+* **`iverilog`** – Compiles the Verilog files.
+* **`-o`** – Specifies the output executable file.
+* **`-DPOST_SYNTH_SIM`** – Defines a macro for post-synthesis simulation.
+* **`-DFUNCTIONAL`** – Enables functional simulation mode.
+* **`-DUNIT_DELAY=#1`** – Adds a unit delay for gate-level simulation.
+* **`-I`** – Includes the necessary source directories.
+* **`testbench.v`** – The top-level testbench file for simulation.
+
+---
+![image alt](
+##  Step 2: Navigate to the Output Directory
+
+Change the directory to where the post-synthesis simulation output is stored:
+
+```bash
+cd output/post_synth_sim/
+```
+
+
+## ▶️ Step 3: Run the Simulation
+
+Execute the compiled simulation file:
+
+```bash
+./post_synth_sim.out
+```
+
+
+---
+
+## 📊 Step 4: View Waveforms Using GTKWave
+
+Open the generated waveform file with GTKWave to visualize signal activity:
+
+```bash
+gtkwave post_synth_sim.vcd
+```
+
+
+
+
+
 ## 🧾 Results Summary
 
 | Stage          | Simulator | Output             | Result        |
