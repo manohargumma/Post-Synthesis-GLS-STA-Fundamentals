@@ -167,11 +167,15 @@ stat
 
 
 ```
-![image alt](
+
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/7c3a334eaa734eb84950d499d893a205dd40387e/Screenshot%20from%202025-10-07%2023-37-20.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/7c3a334eaa734eb84950d499d893a205dd40387e/Screenshot%20from%202025-10-07%2023-37-48.png)
 ### 8️⃣ Write the Synthesized Netlist
 ```bash
-iverilog -o /home/manohar-g/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim.out \ -DPOST_SYNTH_SIM -DFUNCTIONAL -DUNIT_DELAY=#1 \ -I /home/manohar-g/VLSI/VSDBabySoC/src/include \ -I /home/manohar-g/VLSI/VSDBabySoC/src/module \ /home/manohar-g/VLSI/VSDBabySoC/src/module/testbench.v
+write_verilog -noattr output/synth/vsdbabysoc.synth.v
 ```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/7c3a334eaa734eb84950d499d893a205dd40387e/Screenshot%20from%202025-10-07%2023-45-33.png)
+
 ## 🧾 Results Summary
 
 | Stage          | Simulator | Output             | Result        |
@@ -198,32 +202,7 @@ iverilog -o /home/manohar-g/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_sim
 
 ---
 
-## 📁 Repository Structure
 
-```
-VSDBabySoC_GLS/
-├── src/
-│   ├── core/       # RISC-V core (rvmyth)
-│   ├── pll/        # PLL module
-│   ├── dac/        # DAC module
-│   ├── include/    # Header files
-│   └── module/     # SoC integration modules 
-├── synth/
-│   ├── yosys/
-│   │   └── synth.ys
-│   └── netlist/
-│       └── top_netlist.v
-├── sim/
-│   ├── tb/
-│   ├── scripts/
-│   └── output/
-├── docs/
-│   └── GLS_flow.md
-├── LICENSE
-└── README.md
-```
-
----
 
 ## 🧩 Next Steps
 
