@@ -3,7 +3,7 @@
 
 # GLS OF BABYSOC
 ## Post-Synthesis GLS  
-**Purpose of GLS**
+## Purpose of GLS
 
 The Gate-Level Simulation (GLS) verifies the correctness of a synthesized netlist by ensuring it behaves exactly like the original RTL design.
 
