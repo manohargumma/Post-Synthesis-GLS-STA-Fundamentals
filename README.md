@@ -7,7 +7,7 @@
 ![Simulator-Icarus\_Verilog](https://img.shields.io/badge/Simulator-Icarus_Verilog-orange)
 
 
-
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-10-14.png)
 ## Post-Synthesis GLS  
 ## Purpose of GLS
 
