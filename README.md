@@ -84,19 +84,45 @@ read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_02
 
 ### 3️⃣ Run Synthesis
 ```bash
-$synth -top vsdbabysoc
+synth -top vsdbabysoc
 
 ```
+
+### 4️⃣ Map D Flip-Flops to Standard Cells
+
 ```bash
-$dfflibmap -liberty /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+dfflibmap -liberty /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
 ```
+### 5️⃣ Perform Optimization and Technology Mapping
 ```bash
 
 $opt
 ```
 ```bash
 abc -liberty /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
+
+```
+### 6️⃣ Perform Final Clean-Up and Renaming
+
+```bash
+
+flatten
+```
+
+```bash
+setundef -zero
+```
+```bash
+ clean -purge
+```
+```bash
+ rename -enumerate
+
+```
+```bash
+stat
+
 
 ```
 
