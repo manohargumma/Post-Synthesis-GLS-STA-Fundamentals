@@ -67,14 +67,13 @@ GLS helps confirm that this transformation did not change the intended behavior.
 
 
 
-### 2️⃣ Run Gate-Level Simulation (GLS)
-
+### 2️⃣ Read Liberty Files
 ```bash
 
+read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsdpll.lib
 
-vvp ../output/gls_sim.out
 ```
-
+<a href="https://ibb.co/dyJ5mnZ"><img src="https://i.ibb.co/KHzrKCn/Screenshot-from-2025-10-07-23-21-27.png" alt="Screenshot-from-2025-10-07-23-21-27" border="0"></a>
 To view waveforms:
 
 ```bash
