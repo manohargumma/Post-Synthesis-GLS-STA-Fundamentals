@@ -63,7 +63,7 @@ GLS helps confirm that this transformation did not change the intended behavior.
  read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/clk_gate.v
 
 ```
-
+<a href="https://ibb.co/MkSwBMWH"><img src="https://i.ibb.co/B23WnqdJ/Screenshot-from-2025-10-07-23-17-10.png" alt="Screenshot-from-2025-10-07-23-17-10" border="0"></a>
 
 ---
 
