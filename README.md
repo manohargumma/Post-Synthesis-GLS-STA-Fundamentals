@@ -1,1 +1,1 @@
-# -Post-Synthesis-GLS-STA-Fundamentals-
+# Post-Synthesis-GLS-STA-Fundamentals-
