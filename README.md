@@ -52,7 +52,7 @@ GLS helps confirm that this transformation did not change the intended behavior.
 ```bash
  read_verilog /home/manohar-g/VLSI/VSDBabySoC/src/module/vsdbabysoc.v
 
-```
+```https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-10-14.png?raw=true
 <a href="https://ibb.co/CKgWsC32"><img src="https://i.ibb.co/Zz5N14pm/Screenshot-from-2025-10-07-23-10-14.png" alt="Screenshot-from-2025-10-07-23-10-14" border="0"></a>
 ```bash
  read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/rvmyth.v
