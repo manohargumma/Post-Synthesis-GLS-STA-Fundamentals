@@ -75,10 +75,30 @@ read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsdpll.lib
 ```
 <a href="https://ibb.co/dyJ5mnZ"><img src="https://i.ibb.co/KHzrKCn/Screenshot-from-2025-10-07-23-21-27.png" alt="Screenshot-from-2025-10-07-23-21-27" border="0"></a>
 ```bash
-gtkwave ../output/gls_wave.vcd
+read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsddac.lib
+```
+```bash
+read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
 ```
 
----
+### 3️⃣ Run Synthesis
+```bash
+$synth -top vsdbabysoc
+
+```
+```bash
+$dfflibmap -liberty /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+```
+```bash
+
+$opt
+```
+```bash
+abc -liberty /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -script +strash;scorr;ifraig;retime;{D};strash;dch,-f;map,-M,1,{D}
+
+```
 
 ## 🧾 Results Summary
 
