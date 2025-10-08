@@ -204,7 +204,7 @@ iverilog -o  /home/manohar-g/VLSI/VSDBabySoC/output/post_synth_sim/post_synth_si
 * **`testbench.v`** – The top-level testbench file for simulation.
 
 ---
-![image alt](
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c24ce908348f2d59b1e1bd43c3403c2307f9a1b5/Screenshot%20from%202025-10-07%2023-55-33.png)
 ##  Step 2: Navigate to the Output Directory
 
 Change the directory to where the post-synthesis simulation output is stored:
@@ -222,8 +222,8 @@ Execute the compiled simulation file:
 ./post_synth_sim.out
 ```
 
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c24ce908348f2d59b1e1bd43c3403c2307f9a1b5/Screenshot%20from%202025-10-07%2023-55-45.png)
 
----
 
 ## 📊 Step 4: View Waveforms Using GTKWave
 
@@ -232,8 +232,8 @@ Open the generated waveform file with GTKWave to visualize signal activity:
 ```bash
 gtkwave post_synth_sim.vcd
 ```
-
-
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c24ce908348f2d59b1e1bd43c3403c2307f9a1b5/Screenshot%20from%202025-10-07%2023-56-29.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/c24ce908348f2d59b1e1bd43c3403c2307f9a1b5/Screenshot%20from%202025-10-08%2000-04-01.png)
 
 
 
