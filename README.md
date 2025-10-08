@@ -35,11 +35,6 @@ GLS helps confirm that this transformation did not change the intended behavior.
 
    * Validates that the synthesized hardware behaves as intended before physical design and fabrication.
 
-> 💡 *In simple terms:*
-> **GLS ensures that what you built (in RTL) is what you’ll actually get (in silicon).**
-
----
-
 ## ⚙️ Tools Used
 
 | Tool                    | Purpose                                 | Example Version |
@@ -52,10 +47,13 @@ GLS helps confirm that this transformation did not change the intended behavior.
 
 ## 🧠 Step-by-Step Commands
 
-### 1️⃣ Run Synthesis (Yosys)
+### 1️⃣ Load the Top-Level Design and Supporting Modules
 
 ```bash
-yosys -s synth/yosys/synth.ys
+ read_verilog /home/manohar-g/VLSI/VSDBabySoC/src/module/vsdbabysoc.v
+ read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/rvmyth.v
+ read_verilog -sv -I /home/manohar-g/VLSI/VSDBabySoC/src/include /home/manohar-g/VLSI/VSDBabySoC/src/module/clk_gate.v
+
 ```
 
 **Example synth.ys**
@@ -72,11 +70,7 @@ write_verilog ../../synth/netlist/top_netlist.v
 ### 2️⃣ Run Gate-Level Simulation (GLS)
 
 ```bash
-cd sim/scripts
-iverilog -o ../output/gls_sim.out \
-  -I ../../src/include -I ../../src/module \
-  -DFUNCTIONAL -DUNIT_DELAY=#1 \
-  ../../synth/netlist/top_netlist.v ../../sim/tb/top_tb.v
+
 
 vvp ../output/gls_sim.out
 ```
