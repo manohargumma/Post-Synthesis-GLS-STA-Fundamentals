@@ -89,8 +89,9 @@ read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_02
 synth -top vsdbabysoc
 
 ```
-![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-28-04.png)
+
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2308bbea4a3d7b51fa37e70d7267ba2fbf03e443/Screenshot%20from%202025-10-07%2023-27-16.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/main/Screenshot%20from%202025-10-07%2023-28-04.png)
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2308bbea4a3d7b51fa37e70d7267ba2fbf03e443/Screenshot%20from%202025-10-07%2023-28-04.png)
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2308bbea4a3d7b51fa37e70d7267ba2fbf03e443/Screenshot%20from%202025-10-07%2023-28-31.png)
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2308bbea4a3d7b51fa37e70d7267ba2fbf03e443/Screenshot%20from%202025-10-07%2023-28-48.png)
