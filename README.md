@@ -116,7 +116,7 @@ VSDBabySoC_GLS/
 │   ├── pll/        # PLL module
 │   ├── dac/        # DAC module
 │   ├── include/    # Header files
-│   └── module/     # SoC integration modules
+│   └── module/     # SoC integration modules 
 ├── synth/
 │   ├── yosys/
 │   │   └── synth.ys
