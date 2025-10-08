@@ -74,7 +74,6 @@ read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsdpll.lib
 
 ```
 <a href="https://ibb.co/dyJ5mnZ"><img src="https://i.ibb.co/KHzrKCn/Screenshot-from-2025-10-07-23-21-27.png" alt="Screenshot-from-2025-10-07-23-21-27" border="0"></a>
-
 ```bash
 gtkwave ../output/gls_wave.vcd
 ```
