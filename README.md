@@ -77,6 +77,7 @@ read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsdpll.lib
 ```bash
 read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/avsddac.lib
 ```
+<a href="https://ibb.co/5WZ7Mf0w"><img src="https://i.ibb.co/LzKGk2FH/Screenshot-from-2025-10-07-23-22-17.png" alt="Screenshot-from-2025-10-07-23-22-17" border="0"></a>
 ```bash
 read_liberty -lib /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
