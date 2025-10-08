@@ -47,7 +47,7 @@ GLS helps confirm that this transformation did not change the intended behavior.
 
 ## 🧠 Step-by-Step Commands
 
-### 1️⃣ Load the Top-Level Design and Supporting Modules
+### 1️⃣ Read Verilog Source Files
 
 ```bash
  read_verilog /home/manohar-g/VLSI/VSDBabySoC/src/module/vsdbabysoc.v
@@ -56,14 +56,6 @@ GLS helps confirm that this transformation did not change the intended behavior.
 
 ```
 
-**Example synth.ys**
-
-```tcl
-read_verilog -sv ../../src/module/top.v ../../src/core/*.v ../../src/pll/*.v ../../src/dac/*.v
-flatten
-synth -top top
-write_verilog ../../synth/netlist/top_netlist.v
-```
 
 ---
 
