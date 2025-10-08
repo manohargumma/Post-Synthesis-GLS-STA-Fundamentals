@@ -45,7 +45,7 @@ GLS helps confirm that this transformation did not change the intended behavior.
 | **OpenLane (optional)** | PnR using SKY130 PDK                    | —               |
 
 
-## 🧠 Step-by-Step Commands
+## 🧠 Step-by-Step Commands 
 
 ### 1️⃣ Read Verilog Source Files
 
