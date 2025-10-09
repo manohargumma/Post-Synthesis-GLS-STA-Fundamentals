@@ -245,43 +245,204 @@ gtkwave post_synth_sim.vcd
 | GLS Simulation | iverilog  | post_synth_sim.vcd | ✅ Matches RTL |
 | Synthesis      | yosys     | top_netlist.v      | ✅ Completed   |
 
----
 
-## 🔍 Observations
-
-* GLS exposes **uninitialized signals** and **timing issues** not visible in RTL simulations.
-* After adding proper reset logic, all outputs matched between RTL and GLS.
-* Delay annotation (`UNIT_DELAY=#1`) helped confirm timing stability.
 
 ---
 
-## 🧠 Lessons Learned
+# 🧮 Static Timing Analysis (STA) – Week 3 Task
 
-* Always include a **global reset** to avoid ‘X’ states in GLS.
-* Check for **latches** or **floating nets** in synthesis reports.
-* Use **formal equivalence (yosys -equiv)** to complement GLS verification.
-
----
-
-
-
-## 🧩 Next Steps
-
-* Add **SDF Back-Annotation** for realistic delay modeling.
-* Integrate **Formal Equivalence** verification.
-* Automate GLS runs via **Makefile** or **GitHub Actions** CI.
+## 🎯 Objective
+To understand and perform **Static Timing Analysis (STA)** on a synthesized netlist using **OpenSTA**, focusing on:
+- Setup and Hold checks  
+- Slack calculation  
+- Clock definitions  
+- Path-Based Analysis (PBA)
 
 ---
 
-## 🙌 Contributors
+## 📘 What is STA?
 
-* **Manohar Gumma** – Design, synthesis, and GLS implementation
-* **VSD Flow / SKY130 Community** – Open-source ecosystem
+**Static Timing Analysis (STA)** is used to verify the timing of a digital circuit **without simulation**.  
+It analyzes all possible signal paths to ensure data is launched and captured correctly between sequential elements.
+
+STA ensures:
+- Correct data transfer between registers  
+- No setup or hold time violations  
+- The design meets its clock frequency target  
 
 ---
 
-## 🪪 License
+## ⚙️ Setup and Hold Checks
 
-This project is licensed under the [MIT License](LICENSE).
+### ⏱️ Setup Check
+Ensures data arrives **before** the capturing clock edge.
+
+**Condition**
+Data Arrival Time ≤ Data Required Time
+
+markdown
+Copy code
+
+If data arrives late → **Setup Violation** ❌  
+If data arrives early → **Setup Met** ✅  
+
+**Setup Slack**
+Slack = Required Time – Arrival Time
+
+yaml
+Copy code
+
+**Example**
+| Parameter | Value |
+|------------|--------|
+| Clock Period | 10 ns |
+| Data Arrival | 8.6 ns |
+| Required Time | 10.0 ns |
+| Slack | +1.4 ns (PASS ✅) |
 
 ---
+
+### ⚡ Hold Check
+Ensures data remains stable **after** the active clock edge.
+
+**Condition**
+Data Arrival Time ≥ Data Required Time
+
+mathematica
+Copy code
+
+If data changes too soon → **Hold Violation** ❌  
+If data stays stable → **Hold Met** ✅  
+
+**Hold Slack**
+Slack = Arrival Time – Required Time
+
+yaml
+Copy code
+
+---
+
+## 📈 Slack – The Timing Margin
+
+| Type | Formula | Meaning |
+|------|----------|----------|
+| **Setup Slack** | `RT - AT` | Margin before data becomes late |
+| **Hold Slack** | `AT - RT` | Margin before data changes too early |
+
+**Positive Slack:** Timing met ✅  
+**Negative Slack:** Timing violated ❌  
+
+Slack indicates how much margin exists between data arrival and required time.
+
+---
+
+## 🕒 Clock Definitions in STA
+
+The **clock** provides the reference for sequential timing checks.  
+STA tools use clock definitions to determine when signals are launched and captured.
+
+**Clock Definition (SDC Example)**
+```tcl
+create_clock -name core_clk -period 10 [get_ports clk]
+set_clock_uncertainty 0.05 [get_clocks core_clk]
+Key Clock Terms
+Term	Description
+Clock Period	Time between two consecutive edges
+Clock Skew	Difference in arrival time of clock edges at registers
+Clock Jitter	Variation of clock edge from its ideal position
+Clock Uncertainty	Margin covering skew + jitter
+Ideal Clock	Clock with zero delay and skew (pre-CTS assumption)
+
+🔁 Register-to-Register (Reg2Reg) Path
+scss
+Copy code
+      ┌────────────┐       ┌────────────┐
+CLK → │  FF1 (Q)   │-----> │  FF2 (D)   │
+      └────────────┘       └────────────┘
+              ↑
+         Combinational Logic
+FF1 (Launch): Sends data on a clock edge
+
+FF2 (Capture): Receives data on the next clock edge
+
+Setup Check: Data must arrive before capture edge
+
+Hold Check: Data must remain stable after launch edge
+
+📊 Path-Based vs Graph-Based Analysis
+🧠 Graph-Based Analysis (GBA)
+Evaluates all paths simultaneously
+
+Fast but pessimistic (adds unnecessary margins)
+
+Suitable for quick design iterations
+
+🎯 Path-Based Analysis (PBA)
+Analyzes only critical paths in detail
+
+More accurate and realistic results
+
+Used for final timing signoff
+
+Type	Description	Speed	Accuracy
+GBA	All paths, fast, conservative	✅ High	⚠️ Pessimistic
+PBA	Critical paths only	⚠️ Moderate	✅ Precise
+
+Example
+
+Method	Reported Slack	Result
+GBA	–0.08 ns	Violation (Pessimistic)
+PBA	–0.01 ns	Pass (Accurate)
+
+⚙️ Essential STA Concepts
+Concept	Description
+Arrival Time (AT)	Time when data reaches endpoint
+Required Time (RT)	Latest time by which data must arrive
+Slew	Time for signal to transition (10%–90%)
+Load	Capacitance driven by gate output
+Clock-to-Q Delay	Time from clock edge to data output transition
+Slack	Timing margin between RT and AT
+
+🧮 Example OpenSTA Flow
+tcl
+Copy code
+sta
+read_liberty stdcells.lib
+read_verilog synthesized_netlist.v
+read_sdc constraints.sdc
+update_timing
+report_checks -path_delay min_max
+report_timing -max_paths 10
+exit
+🧾 Summary
+Topic	Description
+Setup & Hold Checks	Ensure correct data capture timing
+Slack	Defines available timing margin
+Clock Definitions	Provide timing reference and uncertainty
+Path-Based Analysis	Accurate timing check for critical paths
+GBA vs PBA	Speed vs Precision trade-off
+
+🧠 Prepared as part of Week 3 – Post-Synthesis GLS & STA Fundamentals Project
+
+yaml
+Copy code
+
+---
+
+✅ Copy this code into your repo’s `README.md` — it’s perfectly formatted, concise, and focuses on **Setup/Hold, Slack, Clock, and PBA** as required.
+
+
+
+
+
+
+
+You’ve hit the Free plan limit for GPT-5.
+You need GPT-5 to continue this chat because it has images. Your limit resets after 8:53 PM.
+
+New chat
+
+Upgrade to Go
+
+
+
