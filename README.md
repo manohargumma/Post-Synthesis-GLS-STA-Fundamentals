@@ -275,8 +275,68 @@ STA ensures:
 
 ## ⏱️ Timing Cheacks 
 
+### Arrival Timing
+ is the moment when a signal reaches a specific point in a digital circuit, like the input of a flip-flop or gate. It is a key metric in **Static Timing Analysis (STA)** used to ensure the design meets timing requirements.  
+
+### Required Timing
+ is the time by which a signal must arrive at a specific point in a digital circuit to meet timing constraints. It ensures that data is correctly captured at flip-flops or correctly processed through combinational logic.  
+
+### Slack
+
+**Slack** is the difference between the required arrival time and the actual arrival time of a signal at a point in a digital circuit. It indicates whether timing constraints are met.  
+
+- **Slack = Required Time − Arrival Time**  
+- **Interpretation:**  
+  - Positive slack → timing met (signal arrives on time)  
+  - Negative slack → timing violation (signal arrives late)  
+
+### Setup and Hold Analysis
+
+**Setup and Hold Analysis** checks if data signals meet timing requirements around flip-flops to ensure correct operation. It ensures that data is stable **before** and **after** the clock edge.  
+
+#### 1. **Setup Time Analysis**
+- **Definition:** Checks if data arrives **early enough** before the clock edge.  
+- **Purpose:** Ensures flip-flops capture correct data.  
+- **Violation:** Data arrives too late → setup violation.  
+
+#### 2. **Hold Time Analysis**
+- **Definition:** Checks if data remains **stable after** the clock edge.  
+- **Purpose:** Prevents data from changing too soon after the clock triggers.  
+- **Violation:** Data changes too early → hold violation.  
 
 
-**Arrival Timing** is the moment when a signal reaches a specific point in a digital circuit, like the input of a flip-flop or gate. It is a key metric in **Static Timing Analysis (STA)** used to ensure the design meets timing requirements.  
+### Types of Timing Analysis Paths in STA
+
+In **Static Timing Analysis (STA)**, various paths are analyzed to ensure timing correctness in digital circuits:  
+
+#### 1. **Register-to-Register (Reg-to-Reg)**
+- Timing from one flip-flop to another.  
+- Checks setup and hold requirements along the combinational path.  
+
+#### 2. **Input-to-Register (In2Reg)**
+- Timing from external inputs to internal flip-flops.  
+- Ensures input data arrives in time to meet setup/hold constraints.  
+
+#### 3. **Register-to-Output (Reg2Out)**
+- Timing from internal flip-flops to output pins.  
+- Ensures outputs meet required arrival times.  
+
+#### 4. **Input-to-Output (In2Out)**
+- Timing from external inputs directly to outputs through combinational logic.  
+- Checks purely combinational delays.  
+
+#### 5. **Clock Gating Analysis**
+- Checks timing of gated clocks to ensure proper enable/disable without glitches.  
+
+#### 6. **Recovery and Removal Checks**
+- **Recovery:** Minimum time after an asynchronous reset before a flip-flop can safely capture data.  
+- **Removal:** Maximum time after a reset before flip-flop must capture valid data.  
+
+#### 7. **Data-to-Data (D2D) Paths**
+- Timing between two data signals in combinational paths, used in latch-based designs.  
+
+#### 8. **Latch Time-Borrowing Paths**
+- Latches can allow "time borrowing" across clock phases.  
+- STA checks that data can safely use part of the next clock phase without violating setup/hold.  
 
 
