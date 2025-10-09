@@ -339,4 +339,42 @@ In **Static Timing Analysis (STA)**, various paths are analyzed to ensure timing
 - Latches can allow "time borrowing" across clock phases.  
 - STA checks that data can safely use part of the next clock phase without violating setup/hold.  
 
+### Slew Analysis
 
+**Slew Analysis** checks the **rate of change of a signal** (rise and fall time) as it propagates through gates and interconnects. It ensures signals transition fast enough for reliable operation.  
+
+- **Slew Rate:** Time taken for a signal to transition from low → high (rise) or high → low (fall).  
+- **Types of Slew in STA:**  
+  1. **Data Slew (Max/Min):**  
+     - **Max data slew:** Slowest transition, can cause setup violations.  
+     - **Min data slew:** Fastest transition, can cause hold violations or glitches.  
+  2. **Clock Slew (Max/Min):**  
+     - **Max clock slew:** Slow clock edges may reduce timing margin, causing setup issues.  
+     - **Min clock slew:** Very fast edges may increase overshoot or crosstalk, affecting hold.  
+
+- **Purpose:**  
+  - Ensures signals meet **timing constraints**.  
+  - Prevents **timing violations, glitches, and signal integrity issues**.  
+
+### Load Analysis
+
+**Load Analysis** evaluates the **capacitive load** driven by gates and interconnects in a digital circuit. It ensures that signals propagate fast enough to meet timing constraints.  
+
+- **Definition:** Total load seen by a gate output due to connected gates, interconnects, and pins.  
+- **Key Components:**  
+  1. **Fanout:** Number of gates driven by a single output.  
+     - Higher fanout → higher delay → potential setup violations.  
+  2. **Capacitance:** Sum of input capacitances of connected gates + wire capacitance.  
+     - Higher capacitance → slower signal transitions → affects both setup and hold.  
+### Clock Analysis
+
+**Clock Analysis** checks key properties of the clock signal to ensure reliable operation of sequential circuits.  
+
+- **Clock Skew:**  
+  - The difference in arrival time of the clock at different flip-flops.  
+  - Positive skew reduces setup margin; negative skew reduces hold margin.  
+
+- **Clock Width:**  
+  - The duration of the clock pulse (high or low phase).  
+  - Ensures flip-flops have enough time to capture and propagate data correctly.
+    
