@@ -272,54 +272,11 @@ STA ensures:
 
 ---
 
-## ⚙️ Setup and Hold Checks
 
-### ⏱️ Setup Check
-Ensures data arrives **before** the capturing clock edge.
-
-**Condition**
-Data Arrival Time ≤ Data Required Time
-
-markdown
-Copy code
-
-If data arrives late → **Setup Violation** ❌  
-If data arrives early → **Setup Met** ✅  
-
-**Setup Slack**
-Slack = Required Time – Arrival Time
-
-yaml
-Copy code
-
-**Example**
-| Parameter | Value |
-|------------|--------|
-| Clock Period | 10 ns |
-| Data Arrival | 8.6 ns |
-| Required Time | 10.0 ns |
-| Slack | +1.4 ns (PASS ✅) |
-
----
-
-### ⚡ Hold Check
-Ensures data remains stable **after** the active clock edge.
-
-**Condition**
-Data Arrival Time ≥ Data Required Time
-
-mathematica
-Copy code
-
-If data changes too soon → **Hold Violation** ❌  
-If data stays stable → **Hold Met** ✅  
-
+## ⏱️ Timing Cheacks 
 
 
 
 **Arrival Timing** is the moment when a signal reaches a specific point in a digital circuit, like the input of a flip-flop or gate. It is a key metric in **Static Timing Analysis (STA)** used to ensure the design meets timing requirements.  
 
-
-**Example:**  
-If a flip-flop output reaches the next flip-flop in 3 ns, but the required arrival is 9 ns, the slack = 6 ns → timing is safe.
 
