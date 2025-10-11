@@ -383,6 +383,8 @@ In **Static Timing Analysis (STA)**, various paths are analyzed to ensure timing
 
 ### Timing Ananlysis Using In line Commands
 ```bash
+cd /VLSI/OpenSTA/build
+./sta
 read_liberty /home/manohar-g/VLSI/OpenSTA/examples/nangate45_fast.lib
 read_verilog /home/manohar-g/VLSI/OpenSTA/example/example1.v
 link_design top
