@@ -411,3 +411,16 @@ report_checks
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/a77725a8b5d4ad15e2c64f46cd88333ebbf1f4f9/Screenshot%20from%202025-10-11%2011-49-50.png)
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/a77725a8b5d4ad15e2c64f46cd88333ebbf1f4f9/Screenshot%20from%202025-10-11%2011-49-58.png)
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/a77725a8b5d4ad15e2c64f46cd88333ebbf1f4f9/Screenshot%20from%202025-10-11%2011-50-05.png)
+### VSDBabySoC basic timing analysis
+```bash
+
+read_liberty /home/manohar-g/VLSI/VSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog /home/manohar-g/VLSI/VSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
+link_design vsdbabysoc
+create_clock -name clk -period 10 {clk1 clk2 clk3}
+set_input_delay -clock clk 0 {in1 in2}
+report_checks
+
+```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2b38cc277a994bd1d54e62eb6e019cd21d323326/Screenshot%20from%202025-10-11%2012-02-10.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2b38cc277a994bd1d54e62eb6e019cd21d323326/Screenshot%20from%202025-10-11%2012-02-24.png)
