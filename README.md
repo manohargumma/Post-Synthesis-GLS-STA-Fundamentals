@@ -424,3 +424,62 @@ report_checks
 ```
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2b38cc277a994bd1d54e62eb6e019cd21d323326/Screenshot%20from%202025-10-11%2012-02-10.png)
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/2b38cc277a994bd1d54e62eb6e019cd21d323326/Screenshot%20from%202025-10-11%2012-02-24.png)
+## VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)
+
+This section demonstrates the Post-Synthesis Static Timing Analysis (STA) of the VSDBabySoC design across multiple Process, Voltage, and Temperature (PVT) corners using OpenSTA. STA ensures that the design meets timing requirements under all operating conditions, which is critical for silicon validation.
+***step 1:***
+
+```bash
+gitclone https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing
+
+```
+The following TCL script can be executed to perform STA for the available PVT corners using the Sky130 timing libraries.
+The timing libraries can be downloaded from:https://github.com/arunkpv/vsd-hdp/blob/main/code/riscv/scripts/sta_across_pvt.tcl
+***Tcl script***
+```bash
+# ------------------------------
+# OpenSTA TCL Script for VSDBabySoC
+# ------------------------------
+
+# 1️⃣ Load standard cell library
+read_liberty /home/manohar-g/VLSDBabySoC/src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 2️⃣ Read synthesized netlist
+read_verilog /home/manohar-g/VLSDBabySoC/output/post_synth_sim/vsdbabysoc.synth.v
+
+# 3️⃣ Link top-level design
+link_design vsdbabysoc
+
+# 4️⃣ List ports and cells (optional, for verification)
+puts "Ports:"
+get_ports
+puts "Cells:"
+get_cells
+
+# 5️⃣ Create clock
+# Replace with your actual hashed clock port from get_ports output
+create_clock -name clk -period 10 [_b0aee674a25c0000_p_Port]
+
+# 6️⃣ Set input/output delays
+# Skip the clock port
+foreach port [all_inputs] {
+    if { $port != "_b0aee674a25c0000_p_Port" } {
+        set_input_delay 2 -clock clk [get_ports $port]
+    }
+}
+set_output_delay 2 -clock clk [all_outputs]
+
+# 7️⃣ Assign estimated delays to black boxes
+# Replace with actual DAC/PLL instance names from get_cells
+set_max_delay 2 [get_cells _40cd7d75a25c0000_p_Instance]  ;# DAC
+set_max_delay 2 [get_cells _30d17d75a25c0000_p_Instance]  ;# PLL
+
+# 8️⃣ Generate timing reports
+report_checks -path_delay min_max -fields {slew capacitance} -digits 3 > ~/VLSDBabySoC/output/sta_reports/report_checks.txt
+report_wns > ~/VLSDBabySoC/output/sta_reports/report_wns.txt
+report_tns > ~/VLSDBabySoC/output/sta_reports/report_tns.txt
+
+# 9️⃣ Exit OpenSTA
+exit
+
+```
