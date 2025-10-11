@@ -392,3 +392,4 @@ create_clock -name clk -period 10 {clk1 clk2 clk3}
 set_input_delay -clock clk 0 {in1 in2}
 report_checks
 ```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/ab6836667bcd3cbf53197e4df1f605205eff8250/Screenshot%20from%202025-10-09%2018-24-54.png)
