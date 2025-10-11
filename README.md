@@ -1,5 +1,5 @@
 
-
+# Week-3
 # ⚙️ Post-Synthesis GLS & STA Analysis — VSDBabySoC
 
 ![Tool-Yosys](https://img.shields.io/badge/Tool-Yosys-blue)
@@ -13,17 +13,10 @@
 
 
 
-### Week-3
-
-
-# GLS OF BABYSOC
-
-![Toolchain-Yosys](https://img.shields.io/badge/Tool-Yosys-blue)
-![Simulator-Icarus\_Verilog](https://img.shields.io/badge/Simulator-Icarus_Verilog-orange)
 
 
 
-## Post-Synthesis GLS  
+ 
 ## Purpose of GLS
 
 The Gate-Level Simulation (GLS) verifies the correctness of a synthesized netlist by ensuring it behaves exactly like the original RTL design.
