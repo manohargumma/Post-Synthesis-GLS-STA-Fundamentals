@@ -377,4 +377,16 @@ In **Static Timing Analysis (STA)**, various paths are analyzed to ensure timing
 - **Clock Width:**  
   - The duration of the clock pulse (high or low phase).  
   - Ensures flip-flops have enough time to capture and propagate data correctly.
-    
+   
+# 💻 Static Timing Analysis LAB – Week 3 Task
+## Static timing analysis using OpenSTA
+
+### Timing Ananlysis Using In line Commands
+```bash
+read_liberty /home/manohar-g/VLSI/OpenSTA/examples/nangate45_fast.lib
+read_verilog /home/manohar-g/VLSI/OpenSTA/example/example1.v
+link_design top
+create_clock -name clk -period 10 {clk1 clk2 clk3}
+set_input_delay -clock clk 0 {in1 in2}
+report_checks
+```
