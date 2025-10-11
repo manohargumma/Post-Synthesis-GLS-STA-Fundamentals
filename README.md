@@ -2,25 +2,30 @@
 
 
 
-# ⚙️ Post-Synthesis GLS & STA Analysis — VSDBabySoC
-
-![Tool-Yosys](https://img.shields.io/badge/Tool-Yosys-blue)
-![Simulator-Icarus_Verilog](https://img.shields.io/badge/Simulator-Icarus_Verilog-orange)
-![Analyzer-OpenSTA](https://img.shields.io/badge/Analyzer-OpenSTA-green)
-![Library-sky130_fd_sc_hd](https://img.shields.io/badge/Library-sky130_fd_sc_hd-yellow)
-![Platform-Linux](https://img.shields.io/badge/Platform-Linux-lightgrey)
-
----
-
 ## 🧭 Table of Contents
-- [Week 3](#week-3)
-- [GLS of BabySoC](#gls-of-babysoc)
-- [Post-Synthesis Simulation & Waveforms](#post-synthesis-simulation--waveforms)
-- [Static Timing Analysis (STA)](#static-timing-analysis-sta)
-- [STA Lab – Week 3](#sta-lab--week-3)
-- [PVT Corner Analysis](#pvt-corner-analysis)
-- [Explore More](#explore-more)
-- [Let’s Connect](#lets-connect)
+- [Week 3](#-week-3)
+- [GLS of BabySoC](#-gls-of-babysoc)
+  - [Purpose of GLS](#-purpose-of-gls)
+  - [Key Objectives](#️-key-objectives)
+  - [Tools Used](#️-tools-used)
+  - [Step-by-Step GLS Commands](#-step-by-step-gls-commands)
+- [Post-Synthesis Simulation & Waveforms](#-post-synthesis-simulation--waveforms)
+  - [Compile the Testbench](#️-step-1-compile-the-testbench)
+  - [Run the Simulation](#-step-2-run-the-simulation)
+  - [View Waveforms](#-step-3-view-waveform)
+  - [Results Summary](#-results-summary)
+- [Static Timing Analysis (STA)](#️-static-timing-analysis-sta)
+  - [Objective](#-objective)
+  - [What is STA](#-what-is-sta)
+  - [Key Parameters](#-key-parameters)
+- [STA Lab – Week 3](#-sta-lab--week-3)
+  - [Basic Commands](#-basic-commands)
+  - [MinMax Timing Analysis](#-minmax-timing-analysis)
+- [PVT Corner Analysis](#️-pvt-corner-analysis)
+  - [Download Timing Libraries](#-step-1-download-timing-libraries)
+  - [Run Across Corners](#-step-2-run-across-corners)
+- [Explore More](#-explore-more)
+- [Let’s Connect](#-lets-connect)
 
 
 
