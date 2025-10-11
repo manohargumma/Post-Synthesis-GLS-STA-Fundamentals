@@ -1,52 +1,12 @@
 
 
+# ⚙️ Post-Synthesis GLS & STA Analysis — VSDBabySoC
 
-
-## 🧭 Table of Contents
-
-- [Week-3](#week-3)
-- [GLS of BabySoC](#gls-of-babysoc)
-  - [Purpose of GLS](#purpose-of-gls)
-  - [Key Objectives](#key-objectives)
-  - [Tools Used](#tools-used)
-  - [Step-by-Step Commands](#step-by-step-commands)
-    - [1️⃣ Read Verilog Source Files](#1-read-verilog-source-files)
-    - [2️⃣ Read Liberty Files](#2-read-liberty-files)
-    - [3️⃣ Run Synthesis](#3-run-synthesis)
-    - [4️⃣ Map D Flip-Flops to Standard Cells](#4-map-d-flip-flops-to-standard-cells)
-    - [5️⃣ Perform Optimization and Technology Mapping](#5-perform-optimization-and-technology-mapping)
-    - [6️⃣ Perform Final Clean-Up and Renaming](#6-perform-final-clean-up-and-renaming)
-    - [7️⃣ Check Statistics](#7-check-statistics)
-    - [8️⃣ Write the Synthesized Netlist](#8-write-the-synthesized-netlist)
-- [Post-Synthesis Simulation and Waveforms](#post-synthesis-simulation-and-waveforms)
-  - [Step 1: Compile the Testbench](#step-1-compile-the-testbench)
-  - [Step 2: Navigate to the Output Directory](#step-2-navigate-to-the-output-directory)
-  - [Step 3: Run the Simulation](#step-3-run-the-simulation)
-  - [Step 4: View Waveforms Using GTKWave](#step-4-view-waveforms-using-gtkwave)
-  - [Results Summary](#results-summary)
-- [Static Timing Analysis (STA) – Week 3 Task](#static-timing-analysis-sta--week-3-task)
-  - [Objective](#objective)
-  - [What is STA?](#what-is-sta)
-  - [Timing Checks](#timing-checks)
-    - [Arrival Timing](#arrival-timing)
-    - [Required Timing](#required-timing)
-    - [Slack](#slack)
-    - [Setup and Hold Analysis](#setup-and-hold-analysis)
-      - [1. Setup Time Analysis](#1-setup-time-analysis)
-      - [2. Hold Time Analysis](#2-hold-time-analysis)
-  - [Types of Timing Analysis Paths in STA](#types-of-timing-analysis-paths-in-sta)
-  - [Slew Analysis](#slew-analysis)
-  - [Load Analysis](#load-analysis)
-  - [Clock Analysis](#clock-analysis)
-- [Static Timing Analysis LAB – Week 3 Task](#static-timing-analysis-lab--week-3-task)
-  - [Timing Analysis Using Inline Commands](#timing-analysis-using-inline-commands)
-  - [Min-Max Timing Analysis Using Inline Commands](#min-max-timing-analysis-using-inline-commands)
-  - [VSDBabySoC Basic Timing Analysis](#vsdbabysoc-basic-timing-analysis)
-- [VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)](#vsdbabysoc-pvt-corner-analysis-post-synthesis-timing)
-  - [Step 1: Clone Sky130 Timing Libraries](#step-1-clone-sky130-timing-libraries)
-  - [Step 2: Run OpenSTA TCL Script](#step-2-run-opensta-tcl-script)
-- [Explore More](#explore-more)
-- [Let’s Connect](#lets-connect)
+![Tool-Yosys](https://img.shields.io/badge/Tool-Yosys-blue)
+![Simulator-Icarus_Verilog](https://img.shields.io/badge/Simulator-Icarus_Verilog-orange)
+![Analyzer-OpenSTA](https://img.shields.io/badge/Analyzer-OpenSTA-green)
+![Library-sky130_fd_sc_hd](https://img.shields.io/badge/Library-sky130_fd_sc_hd-yellow)
+![Platform-Linux](https://img.shields.io/badge/Platform-Linux-lightgrey)
 
 
 
