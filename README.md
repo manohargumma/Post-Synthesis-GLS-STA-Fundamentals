@@ -1,3 +1,33 @@
+
+
+
+
+# ⚙️ Post-Synthesis GLS & STA Analysis — VSDBabySoC
+
+![Tool-Yosys](https://img.shields.io/badge/Tool-Yosys-blue)
+![Simulator-Icarus_Verilog](https://img.shields.io/badge/Simulator-Icarus_Verilog-orange)
+![Analyzer-OpenSTA](https://img.shields.io/badge/Analyzer-OpenSTA-green)
+![Library-sky130_fd_sc_hd](https://img.shields.io/badge/Library-sky130_fd_sc_hd-yellow)
+![Platform-Linux](https://img.shields.io/badge/Platform-Linux-lightgrey)
+
+---
+
+## 🧭 Table of Contents
+- [Week 3](#week-3)
+- [GLS of BabySoC](#gls-of-babysoc)
+- [Post-Synthesis Simulation & Waveforms](#post-synthesis-simulation--waveforms)
+- [Static Timing Analysis (STA)](#static-timing-analysis-sta)
+- [STA Lab – Week 3](#sta-lab--week-3)
+- [PVT Corner Analysis](#pvt-corner-analysis)
+- [Explore More](#explore-more)
+- [Let’s Connect](#lets-connect)
+
+
+
+
+
+
+
 ### Week-3
 
 
