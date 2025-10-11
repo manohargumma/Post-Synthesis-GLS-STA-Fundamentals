@@ -486,3 +486,67 @@ exit
 ```
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/51c6a431ea9c70adb7f82f21e228d3b9962111ad/Screenshot%20from%202025-10-11%2014-35-00.png)
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/51c6a431ea9c70adb7f82f21e228d3b9962111ad/Screenshot%20from%202025-10-11%2016-14-08.png)
+
+
+---
+
+## 🌟 Reflections & Learnings
+
+Through this week’s exploration of **Gate-Level Simulation (GLS)** and **Static Timing Analysis (STA)**,  
+I deepened my understanding of how **functional correctness** and **timing closure** come together in a real VLSI design flow.  
+
+> 🧩 Each command, each waveform, and each timing report builds the confidence that the design is truly *tapeout-ready!* 🚀  
+
+---
+
+## 💭 Key Takeaways
+
+- 🧠 *Logic is correct only when timing is correct.*
+- ⚙️ *Open-source tools are powerful when combined with proper methodology.*
+- ⏱️ *STA bridges the gap between design and silicon reality.*
+
+---
+
+## 🌐 Explore More
+
+If you enjoyed this work or found it useful,  
+consider showing your support 💖 by **starring ⭐ this repository** or **forking 🔁 it** to explore further!
+
+<p align="center">
+  <a href="https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals" target="_blank">
+    <img src="https://img.shields.io/badge/⭐ Star%20This%20Repo-blue?style=for-the-badge"/>
+  </a>
+  <a href="https://github.com/manohargumma?tab=repositories" target="_blank">
+    <img src="https://img.shields.io/badge/👨‍💻 Explore%20My%20Projects-8A2BE2?style=for-the-badge"/>
+  </a>
+</p>
+
+---
+
+## 💬 Let’s Connect
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/manohargumma/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+  </a>
+  <a href="mailto:manohar.gumma@example.com">
+    <img src="https://img.shields.io/badge/Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+  </a>
+  <a href="https://github.com/manohargumma" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Manohar--Gumma-000000?style=for-the-badge&logo=github"/>
+  </a>
+</p>
+
+---
+
+## 🧠 “Knowledge grows when shared.”
+
+If you’re passionate about **VLSI design, open-source EDA, or digital chip flows**,  
+keep exploring — the open silicon world has *infinite timing paths* to learn from ⏱️💫  
+
+---
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&width=800&lines=Keep+Designing+✨;Keep+Learning+📚;Keep+Timing+Analyzing+⏱️;Made+with+❤️+by+Manohar+Gumma"/>
+</p>
+
