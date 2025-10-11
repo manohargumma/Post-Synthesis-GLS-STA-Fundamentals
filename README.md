@@ -436,7 +436,7 @@ gitclone https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/mast
 The following TCL script can be executed to perform STA for the available PVT corners using the Sky130 timing libraries.
 The timing libraries can be downloaded from:https://github.com/arunkpv/vsd-hdp/blob/main/code/riscv/scripts/sta_across_pvt.tcl
 <br>
-***Tcl script***
+***Tcl script::***
 ```bash
 # ------------------------------
 # OpenSTA TCL Script for VSDBabySoC
@@ -484,3 +484,5 @@ report_tns > ~/VLSDBabySoC/output/sta_reports/report_tns.txt
 exit
 
 ```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/51c6a431ea9c70adb7f82f21e228d3b9962111ad/Screenshot%20from%202025-10-11%2014-35-00.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/51c6a431ea9c70adb7f82f21e228d3b9962111ad/Screenshot%20from%202025-10-11%2016-14-08.png)
