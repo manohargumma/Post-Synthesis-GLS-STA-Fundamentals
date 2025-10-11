@@ -1,31 +1,31 @@
 
 
-
-
 ## 🧭 Table of Contents
-- [Week 3](#-week-3)
-- [GLS of BabySoC](#-gls-of-babysoc)
-  - [Purpose of GLS](#-purpose-of-gls)
-  - [Key Objectives](#️-key-objectives)
-  - [Tools Used](#️-tools-used)
-  - [Step-by-Step GLS Commands](#-step-by-step-gls-commands)
-- [Post-Synthesis Simulation & Waveforms](#-post-synthesis-simulation--waveforms)
-  - [Compile the Testbench](#️-step-1-compile-the-testbench)
-  - [Run the Simulation](#-step-2-run-the-simulation)
-  - [View Waveforms](#-step-3-view-waveform)
-  - [Results Summary](#-results-summary)
-- [Static Timing Analysis (STA)](#️-static-timing-analysis-sta)
-  - [Objective](#-objective)
-  - [What is STA](#-what-is-sta)
-  - [Key Parameters](#-key-parameters)
-- [STA Lab – Week 3](#-sta-lab--week-3)
-  - [Basic Commands](#-basic-commands)
-  - [MinMax Timing Analysis](#-minmax-timing-analysis)
-- [PVT Corner Analysis](#️-pvt-corner-analysis)
-  - [Download Timing Libraries](#-step-1-download-timing-libraries)
-  - [Run Across Corners](#-step-2-run-across-corners)
-- [Explore More](#-explore-more)
-- [Let’s Connect](#-lets-connect)
+- [Week 3](#week-3)
+- [GLS of BabySoC](#gls-of-babysoc)
+  - [Purpose of GLS](#purpose-of-gls)
+  - [Key Objectives](#key-objectives)
+  - [Tools Used](#tools-used)
+  - [Step-by-Step GLS Commands](#step-by-step-gls-commands)
+- [Post-Synthesis Simulation & Waveforms](#post-synthesis-simulation--waveforms)
+  - [Step 1: Compile the Testbench](#step-1-compile-the-testbench)
+  - [Step 2: Run the Simulation](#step-2-run-the-simulation)
+  - [Step 3: View Waveform](#step-3-view-waveform)
+  - [Results Summary](#results-summary)
+- [Static Timing Analysis (STA)](#static-timing-analysis-sta)
+  - [Objective](#objective)
+  - [What is STA?](#what-is-sta)
+  - [Key Parameters](#key-parameters)
+- [STA Lab – Week 3](#sta-lab--week-3)
+  - [Basic Commands](#basic-commands)
+  - [MinMax Timing Analysis](#minmax-timing-analysis)
+- [PVT Corner Analysis](#pvt-corner-analysis)
+  - [Step 1: Download Timing Libraries](#step-1-download-timing-libraries)
+  - [Step 2: Run Across Corners](#step-2-run-across-corners)
+- [Explore More](#explore-more)
+- [Let’s Connect](#lets-connect)
+
+
 
 
 
