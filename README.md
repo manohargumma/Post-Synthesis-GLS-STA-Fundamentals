@@ -393,3 +393,21 @@ set_input_delay -clock clk 0 {in1 in2}
 report_checks
 ```
 ![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/ab6836667bcd3cbf53197e4df1f605205eff8250/Screenshot%20from%202025-10-09%2018-24-54.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/a77725a8b5d4ad15e2c64f46cd88333ebbf1f4f9/Screenshot%20from%202025-10-09%2018-24-13.png)
+
+### Min Max Timming Analysis using IN line Commands
+```bash
+read_liberty -min /home/manohar-g/VLSI/OpenSTA/examples/nangate45_fast.lib
+read_verilog -min /home/manohar-g/VLSI/OpenSTA/example/example1.v
+
+read_liberty -max /home/manohar-g/VLSI/OpenSTA/examples/nangate45_fast.lib
+read_verilog -max /home/manohar-g/VLSI/OpenSTA/example/example1.v
+link_design top
+create_clock -name clk -period 10 {clk1 clk2 clk3}
+set_input_delay -clock clk 0 {in1 in2}
+report_checks
+
+```
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/a77725a8b5d4ad15e2c64f46cd88333ebbf1f4f9/Screenshot%20from%202025-10-11%2011-49-50.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/a77725a8b5d4ad15e2c64f46cd88333ebbf1f4f9/Screenshot%20from%202025-10-11%2011-49-58.png)
+![image alt](https://github.com/manohargumma/Post-Synthesis-GLS-STA-Fundamentals/blob/a77725a8b5d4ad15e2c64f46cd88333ebbf1f4f9/Screenshot%20from%202025-10-11%2011-50-05.png)
