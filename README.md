@@ -490,22 +490,6 @@ exit
 
 ---
 
-## 🌟 Reflections & Learnings
-
-Through this week’s exploration of **Gate-Level Simulation (GLS)** and **Static Timing Analysis (STA)**,  
-I deepened my understanding of how **functional correctness** and **timing closure** come together in a real VLSI design flow.  
-
-> 🧩 Each command, each waveform, and each timing report builds the confidence that the design is truly *tapeout-ready!* 🚀  
-
----
-
-## 💭 Key Takeaways
-
-- 🧠 *Logic is correct only when timing is correct.*
-- ⚙️ *Open-source tools are powerful when combined with proper methodology.*
-- ⏱️ *STA bridges the gap between design and silicon reality.*
-
----
 
 ## 🌐 Explore More
 
@@ -526,10 +510,10 @@ consider showing your support 💖 by **starring ⭐ this repository** or **fork
 ## 💬 Let’s Connect
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/manohargumma/" target="_blank">
+  <a href="https://www.linkedin.com/in/manohar-gumma-56920b2b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BQDrHZ%2FsISxWSe9PA4xcVSA%3D%3D" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
   </a>
-  <a href="mailto:manohar.gumma@example.com">
+  <a href="mailto:manohar.manohargumma13@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
   <a href="https://github.com/manohargumma" target="_blank">
@@ -539,14 +523,4 @@ consider showing your support 💖 by **starring ⭐ this repository** or **fork
 
 ---
 
-## 🧠 “Knowledge grows when shared.”
-
-If you’re passionate about **VLSI design, open-source EDA, or digital chip flows**,  
-keep exploring — the open silicon world has *infinite timing paths* to learn from ⏱️💫  
-
----
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=1000&color=00F7FF&center=true&vCenter=true&width=800&lines=Keep+Designing+✨;Keep+Learning+📚;Keep+Timing+Analyzing+⏱️;Made+with+❤️+by+Manohar+Gumma"/>
-</p>
 
