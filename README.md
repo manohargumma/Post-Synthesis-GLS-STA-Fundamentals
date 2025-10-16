@@ -50,7 +50,7 @@ GLS helps confirm that this transformation did not change the intended behavior.
 | **Yosys**               | Synthesis (generate gate-level netlist) | 0.57+           |
 | **Icarus Verilog**      | Simulation (pre and post-synthesis)     | 11.0            |
 | **GTKWave**             | View waveform results                   | —               |
-| **OpenLane (optional)** | PnR using SKY130 PDK                    | —               |
+| **OpenLane (optional)** | PnR using SKY130 PDK                    | —               | 
 
 
 ## 🧠 Step-by-Step Commands 
